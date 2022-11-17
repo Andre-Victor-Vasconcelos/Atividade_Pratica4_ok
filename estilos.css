@@ -258,18 +258,14 @@ div.rodape {
 }
 
 /* 1. Configurações CSS para telas de até 1280px de largura*/
-@media screen and (
-
-    /* FAZER AQUI*/
-) {
+@media (max-width: 1280px) {
     .areaesquerda {
         /* 2. Posicionamento estático */
-        /* FAZER AQUI*/
-        /* 3. Largura de 80% da largura área de visualização */
-        /* FAZER AQUI*/
-        /* 4. Altura automática */
-        /* FAZER AQUI*/
-    }
+         position: static;        
+/* 3. Largura de 80% da largura área de visualização */
+width: 80%;        
+/* 4. Altura automática */
+height: auto;    }
 
     .areaesquerda .brand {
         /* 5. Contêiner flexbox */
@@ -279,30 +275,32 @@ div.rodape {
         margin-bottom: 1rem;
     }
 
-    .areaesquerda .menu {
+        .areaesquerda .menu {
         /* 7. Contêiner flexbox */
-        /* FAZER AQUI*/
-        /* 8. Espaço de 3vw entre itens flexbox */
-        /* FAZER AQUI*/
-    }
+        display: flex;        /* 
+        8. Espaço de 3vw entre itens flexbox */
+        gap: 3vw;
+}
 
     .areaesquerda .menu img {
         /* 9. Largura de 2.5% da largura área de visualização */
-        /* FAZER AQUI*/
+        width: 2.5%;
+
         /* 10. Margem direita de 0.6% da largura área de visualização */
-        /* FAZER AQUI*/
-    }
+margin-right: 0.6%;    
+}
 
     .areaesquerda .menu a {
         /* 11. Tamanho de fonte de 2.5% da largura área de visualização */
-        /* FAZER AQUI*/
-    }
+font-size: 2.5%;   
+ }
 
     .areaesquerda h2 {
         /* 12. Alinhamento vertical superior */
-        /* FAZER AQUI*/
+        vertical-align:top ;
+
         /* 13. Margens zeradas (forçar) */
-        /* FAZER AQUI*/
+        margin: 0 !important;        
         font-size: 6vw;
     }
 
@@ -313,32 +311,33 @@ div.rodape {
 
     .cabecalho {
         /* 14. Ocultar elemento */
-        /* FAZER AQUI*/
-    }
+       display: none;    }
 
     #subtituloPrincipal {
         /* 15. Mostrar elemento */
-        /* FAZER AQUI*/
-    }
+       display: show;  
+
+}
 
     .areadireita {
         width: 80vw;
         padding: 0;
         /* 16. Posicionamento estático */
-        /* FAZER AQUI*/
-        /* 17. Margem interna superior de 0.5rem */
-        /* FAZER AQUI*/
-    }
+        position: static;        
+/* 17. Margem interna superior de 0.5rem */
+        padding-top: 0.5rem;    }
 
     .sobre .hero {
         /* 18. Grid de duas colunas iguais */
-        /* FAZER AQUI*/
-    }
+        grid-template-columns: 1fr 1fr ;
+
+}
 
     .sobre .hero img {
         width: 100%;
         /* 19. Altura automática (forçar) */
-        /* FAZER AQUI*/
+        height: auto !important;        
+
     }
 
     .sobre .hero .texto h2 {
@@ -347,7 +346,11 @@ div.rodape {
 
     .card {
         /* 20. Largura de 50% do elemento pai, menos 0.75rem (use função calc() ) */
-        /* FAZER AQUI*/
+
+        width: calc(50% - 0.75rem);
+
+
+        
     }
 
     .contato input,
